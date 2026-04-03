@@ -1,5 +1,5 @@
 Blog de Informática - Landing Page
-Este es un proyecto sencillo de una página web estática que sirve como un Blog de Informática. El objetivo principal es presentar información estructurada sobre conceptos básicos, historia y componentes de la computación utilizando una interfaz limpia y minimalista.
+Este es un proyecto sencillo de una página web estática que sirve como un blog de informática. El objetivo principal es presentar información estructurada sobre conceptos básicos, historia y componentes de la computación utilizando una interfaz limpia y minimalista.
 
 Características
 Navegación Interna: Incluye un menú de catálogo con enlaces ancla para desplazarse rápidamente por el contenido.
