@@ -11,7 +11,7 @@ Estilo Moderno: Uso de colores vibrantes (#40E0D0 turquesa), bordes redondeados 
 Contenido Educativo: Cubre desde los orígenes de la informática hasta la Inteligencia Artificial y Ciberseguridad.
 
 Tecnologías Utilizadas
-HTML5: Estructura semántica del contenido (<nav>, <article>, <main>).
+HTML5: Estructura semántica del contenido (nav, article, main).
 
 CSS3: Estilos personalizados, diseño de cajas (Box Model) y tipografías.
 
