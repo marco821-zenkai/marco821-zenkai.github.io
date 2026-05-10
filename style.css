@@ -1,0 +1,36 @@
+/* Estilos generales y variables */
+:root {/* Definición de variables CSS para temas claro y oscuro */
+    --bg: #f0f2f5; --text: #1c1e21; --card: #ffffff; --primary: #3498db;
+}
+body.dark-mode {/* Variables para modo oscuro */
+    --bg: #18191a; --text: #e4e6eb; --card: #242526;
+}
+body {/* Estilos generales para el cuerpo de la página */
+    font-family: 'Segoe UI', sans-serif; background-color: var(--bg); color: var(--text);
+    margin: 0; padding: 20px; transition: 0.3s; text-align: center;
+}
+.oculto { display: none !important; }/* Clase para ocultar elementos */
+.contenedor-principal {/* Estilos para los contenedores de cada proyecto */
+    max-width: 500px; margin: 15px auto; background: var(--card);
+    border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden;
+}
+.titulo-proyecto {/* Estilos para los títulos de cada proyecto */
+    background: var(--primary); color: white; margin: 0; padding: 15px; cursor: pointer;
+}
+.proyecto { padding: 20px; }/* Estilos para los proyectos individuales */
+button {/* Estilos para los botones */
+    padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;
+    background: #ddd; margin: 5px; transition: 0.2s;
+}
+button:hover { background: #bbb; }/* Estilos para los botones al pasar el mouse */
+
+/* Especiales */
+#display-contador { font-size: 3rem; font-weight: bold; }/* Estilos para el contador */
+.positivo { color: #2ecc71; } .negativo { color: #e74c3c; } .neutro { color: #95a5a6; }/* Colores para el contador según su valor */
+.grid-calculadora { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; }/* Estilos para la cuadrícula de la calculadora */
+#display-calculadora { background: #222; color: #0f0; padding: 10px; font-size: 1.5rem; text-align: right; margin-bottom: 10px; }/* Estilos para el display de la calculadora */
+.cuadricula { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 10px; }/* Estilos para la cuadrícula de imágenes */
+.cuadricula img { width: 100%; height: 80px; object-fit: cover; cursor: pointer; border-radius: 5px; }/* Estilos para las imágenes de la galería */
+.modal { position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.8); display:flex; justify-content:center; align-items:center; z-index:100; }/* Estilos para el modal de imagen */
+#img-full { max-width: 90%; max-height: 80%; }/* Estilos para la imagen en tamaño completo */
+.caja-res { background: #eee; padding: 10px; font-family: monospace; margin: 10px 0; color: #333; }/* Estilos para la caja de resultados */

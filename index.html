@@ -1,104 +1,166 @@
-<!doctype html>
-<html lang="es">
-
-<head>
+<!DOCTYPE html><!--esta etiqueta indica que el documento es HTML5-->
+<html lang="es"><!--esta etiqueta indica que el idioma del documento, en este caso es español-->
+<head><!--esta sección contiene metadatos sobre el documento, como el título, la codificación de caracteres y enlaces a archivos externos-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BLOG DE INFORMÁTICA</title>
-    <style>
-        body {
-            background-color: #40E0D0;
-            font-family: sans-serif;
-            padding: 50px;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        main {
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 30px;
-            border-radius: 15px;
-            max-width: 900px;
-            margin: auto;
-        }
-
-        h1, h3, h4 {
-            color: #2c3e50;
-        }
-
-        img {
-            display: block;
-            margin: 20px auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-
-        .nav-link {
-            display: inline-block;
-            margin-bottom: 20px;
-            text-decoration: none;
-            color: #005f5f;
-            font-weight: bold;
-        }
-
-        .nav-link:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>Reto de los 10 Proyectos - Marcoantonio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
-<body>
+<body><!--esta sección contiene el contenido visible de la página, como texto, imágenes y elementos interactivos-->
+    <header><!--esta sección contiene el encabezado de la página-->
+        <h1>RETO DE LOS 10 PROYECTOS</h1>
+    </header>
+    <!--Todos los proyecto tiene tiene la misma estructura a excepción de los detalles específicos que corresponden a las funciones de cada por lo tanto la estructura la explicare en el proyecto 1 y esos detalles los explicare en su respectiva seccion-->
 
     <main>
-        <nav id="catalogo">
-            <h1>CATÁLOGO DE CONTENIDOS</h1>
-            <a class="nav-link" href="#articulo-informatica">→ Leer: ¿Qué es la informática?</a>
-        </nav>
+        <!-- Proyecto 1: Contador -->
+         <!--el proyecto 1 es un contador inteligente que permite al usuario incrementar, decrementar y reiniciar un valor-->
+        <section class="contenedor-principal"><!--esta sección contiene el contenido del proyecto 1-->
+            <h2 class="titulo-proyecto" data-target="p1">Proyecto 1: Contador Inteligente</h2><!--esta etiqueta h2 indica el título del proyecto 1, con una clase para estilos y un atributo data-target para identificar el proyecto-->
+            <div id="p1" class="proyecto oculto"><!--esta sección contiene el contenido del proyecto 1, y el atributo id para identificarlo, y el atributo clas sirve para asignar funciones y estilos depedientes de javascript y css-->
+                <div id="display-contador" class="neutro">0</div><!--la etiqueta <div> sirve para organizar y agrupar elementos de la sección, y display es para mostrar la funcion del proyecto-->
+                <div class="botones"><!--aqui se le asigno botones, y mas abajo se puede ver la etiqueta <button> qwe especifaca cuales son eso botones-->
+                    <button id="btn-disminuir">-1</button>
+                    <button id="btn-reset">Reiniciar</button><!--(btn singfica boton)-->
+                    <button id="btn-aumentar">+1</button>
+                </div><!--aqui cierra la sección de botones de p1-->
+            </div><!--aqui cierra el proyecto 1-->
+        </section><!--aqui cierra la sección del proyecto 1-->
 
-        <hr>
+        <!-- Proyecto 2: Lista de Tareas -->
+            <!--el proyecto 2 es una lista de tareas que permite al usuario agregar, eliminar y marcar tareas como completadas-->
+        <section class="contenedor-principal">
+            <h2 class="titulo-proyecto" data-target="p2">Proyecto 2: Lista de Tareas</h2>
+            <div id="p2" class="proyecto oculto">
+                <input type="text" id="input-tarea" placeholder="Nueva tarea..."><!--la etiqueta <input> sirve para crear un campo de entrada de texto, y type="text" especifica que es un campo de texto-->
+                <button id="btn-agregar-tarea">Agregar</button>
+                <ul id="lista-tareas"></ul><!--la etiqueta <ul> sirve para crear una lista-->
+            </div>
+        </section>
 
-        <article id="articulo-informatica">
-            <h1>¿Qué es la Informática?</h1>
-            
-            <img src="https://img.freepik.com/fotos-premium/ingenieria-informatica-cerca-escritura-codigo-programacion-base-datos-teclado-computadora-portatil-ia-generativa_1259709-85455.jpg" 
-                 alt="Imagen representativa de informática" width="500">
+        <!-- Proyecto 3: Adivina el Número -->
+            <!--el proyecto 3 es un juego de adivinar el número, donde el usuario tiene que adivinar un número aleatorio entre 1 y 100, y el programa le dará pistas si su suposición es muy alta o muy baja-->
+        <section class="contenedor-principal">
+            <h2 class="titulo-proyecto" data-target="p3">Proyecto 3: Adivina el Número</h2>
+            <div id="p3" class="proyecto oculto">
+                <input type="number" id="input-adivinar" placeholder="1-100">
+                <button id="btn-comprobar">¿Es este?</button>
+                <button id="btn-nuevo-juego">Nuevo Juego</button>
+                <p id="pista-adivinar"></p><!--la etiqueta <p> sirve para mostrar un texto, y en este caso se usara para mostrar pistas al usuario-->
+                <p>Intentos: <span id="intentos-adivinar">0</span></p><!--aqui se muestra el numero de intentos que lleva el usuario, y se actualizara cada vez que el usuario haga una suposicion-->
+            </div>
+        </section>
 
-            <h3>Introducción</h3>
-            <p>La informática, también conocida como ciencias de la computación, es una disciplina amplia y multidisciplinaria que se ocupa del estudio de los procesos de información y su transformación mediante sistemas computacionales. En esencia, abarca el diseño, desarrollo, implementación y mantenimiento de sistemas que procesan datos de manera eficiente y automatizada.</p>
-            
-            <p>A lo largo de este artículo, exploraremos en detalle su evolución histórica, componentes principales y su impacto en el futuro, destacando conceptos teóricos y prácticos que la hacen la disciplina más relevante del siglo XXI.</p>
+        <!-- Proyecto 4: Calculadora -->
+                <!--el proyecto 4 es una calculadora básica que permite al usuario realizar operaciones aritméticas simples como suma, resta, multiplicación y división-->
+        <section class="contenedor-principal">
+            <h2 class="titulo-proyecto" data-target="p4">Proyecto 4: Calculadora Básica</h2>
+            <div id="p4" class="proyecto oculto">
+                <div id="display-calculadora">0</div>
+                <div class="grid-calculadora">
+                    <button class="btn-num">7</button><button class="btn-num">8</button><button class="btn-num">9</button><button class="btn-op">/</button>
+                    <button class="btn-num">4</button><button class="btn-num">5</button><button class="btn-num">6</button><button class="btn-op">*</button>
+                    <button class="btn-num">1</button><button class="btn-num">2</button><button class="btn-num">3</button><button class="btn-op">-</button>
+                    <button id="btn-clear">C</button><button class="btn-num">0</button><button id="btn-igual">=</button><button class="btn-op">+</button>
+                </div>
+            </div>
+        </section>
 
-            <h3>Definición y Conceptos Básicos</h3>
-            <p>El término proviene del francés <em>"informatique"</em> (1962), combinando "information" y "automatique". Se define como la ciencia que estudia la representación y transmisión de información mediante dispositivos electrónicos.</p>
+        <!-- Proyecto 5: Color Aleatorio -->
+         <!--el proyecto 5 es un generador de colores aleatorios que permite al usuario cambiar el fondo de la página a un color aleatorio y copiar el código hexadecimal del color generado-->
+        <section class="contenedor-principal">
+            <h2 class="titulo-proyecto" data-target="p5">Proyecto 5: Color Aleatorio</h2>
+            <div id="p5" class="proyecto oculto">
+                <div id="hex-color">#FFFFFF</div><!--mostrar el color hexadecimal -->
+                <button id="btn-generar-color">Cambiar Fondo</button>
+                <button id="btn-copiar-color">Copiar HEX</button>
+            </div>
+        </section>
 
-            <h4>Información y Datos</h4>
-            <p>Los datos son hechos brutos (números, texto), mientras que la información es el resultado de procesar esos datos para darles significado.</p>
+        <!-- Proyecto 6: Temporizador -->
+            <!--el proyecto 6 es un temporizador que permite al usuario establecer un tiempo en minutos y segundos, iniciar la cuenta regresiva, pausar y reiniciar el temporizador-->
+        <section class="contenedor-principal">
+            <h2 class="titulo-proyecto" data-target="p6">Proyecto 6: Temporizador</h2>
+            <div id="p6" class="proyecto oculto">
+                <div id="display-timer">00:00</div>
+                <div class="inputs-timer">
+                    <input type="number" id="min-timer" placeholder="Min" min="0"><!--la etiqueta <input> sirve para crear un campo de entrada de texto, y type="number" especifica que es un campo de número-->
+                    <input type="number" id="sec-timer" placeholder="Seg" min="0" max="59"><!--la etiqueta <input> sirve para crear un campo de entrada de texto, y type="number" especifica que es un campo de número-->
+                </div>
+                <div class="botones">
+                    <button id="btn-start-timer">Iniciar</button>
+                    <button id="btn-pause-timer">Pausar</button>
+                    <button id="btn-reset-timer">Reiniciar</button>
+                </div>
+            </div>
+        </section>
 
-            <h4>Algoritmos y Programación</h4>
-            <p>Un algoritmo es un conjunto de reglas paso a paso para resolver un problema. La programación es el arte de escribir esos algoritmos en lenguajes como Python, Java o C++.</p>
+        <!-- Proyecto 7: Generador de contraseñas -->
+            <!--el proyecto 7 es un generador de contraseñas que permite al usuario generar contraseñas seguras con opciones para incluir mayúsculas, números y símbolos, y copiar la contraseña generada al portapapeles-->
+        <section class="contenedor-principal">
+            <h2 class="titulo-proyecto" data-target="p7">Proyecto 7: Contraseñas</h2>
+            <div id="p7" class="proyecto oculto">
+                <label>Longitud: <span id="val-long">12</span></label>
+                <input type="range" id="input-long" min="6" max="20" value="12">
+                <div class="checks">
+                    <label><input type="checkbox" id="c-mayus" checked> Mayús</label>
+                    <label><input type="checkbox" id="c-nums" checked> Númber</label>
+                    <label><input type="checkbox" id="c-syms"> Símbol</label>
+                </div>
+                <div id="result-pass" class="caja-res">********</div>
+                <button id="btn-gen-pass">Generar</button>
+                <button id="btn-copy-pass">Copiar</button>
+            </div>
+        </section>
 
-            <h3>Historia de la Informática</h3>
-            <h4>Orígenes antiguos</h4>
-            <p>Desde el ábaco (2400 a.C.) hasta la Pascalina del siglo XVII, la humanidad siempre ha buscado automatizar el cálculo.</p>
+        <!-- Proyecto 8: Modo Oscuro -->
+                <!--el proyecto 8 es un modo oscuro/claro que permite al usuario cambiar el tema de la página entre modo oscuro y modo claro, y recordar la preferencia del usuario utilizando localStorage-->
+        <section class="contenedor-principal">
+            <h2 class="titulo-proyecto" data-target="p8">Proyecto 8: Modo Oscuro/claro</h2>
+            <div id="p8" class="proyecto oculto">
+                <button id="toggle-dark">Cambiar Tema</button><!--el boton para cambiar el tema de la página-->
+            </div>
+        </section>
 
-            <h4>Siglo XIX y la Máquina Analítica</h4>
-            <p>Charles Babbage diseñó el precursor de la computadora moderna, mientras que <strong>Ada Lovelace</strong> escribió el primer algoritmo de la historia, convirtiéndose en la primera programadora.</p>
+        <!-- Proyecto 9: Piedra Papel Tijeras -->
+                <!--el proyecto 9 es un juego de piedra, papel o tijeras donde el usuario puede jugar contra la computadora y el programa muestra el resultado de cada ronda-->
+        <section class="contenedor-principal">
+            <h2 class="titulo-proyecto" data-target="p9">Proyecto 9: PPT</h2><!--PPT es la abreviatura de piedra, papel o tijeras-->
+            <div id="p9" class="proyecto oculto">
+                <div class="marcador">Tú: <span id="pts-user">0</span> | PC: <span id="pts-pc">0</span></div><!--aqui se muestra el marcador del juego, con los puntos del usuario y de la computadora-->
+                <div class="botones">
+                    <button class="btn-juego" data-eleccion="piedra">Piedra</button>
+                    <button class="btn-juego" data-eleccion="papel">Papel</button>
+                    <button class="btn-juego" data-eleccion="tijeras">Tijeras</button>
+                </div>
+                <p id="res-juego">¡Elige uno!</p>
+                <button id="btn-reset-juego">Reiniciar Marcador</button>
+            </div>
+        </section>
 
-            <h4>Era Digital</h4>
-            <p>Desde el desarrollo de la Z3 en la Segunda Guerra Mundial y la arquitectura de Von Neumann, hasta la invención del microprocesador en los años 70 que permitió la creación de las PCs de Apple e IBM.</p>
-
-            <h3>Componentes principales</h3>
-            <ul>
-                <li><strong>Arquitectura:</strong> El hardware (CPU, RAM, Discos).</li>
-                <li><strong>Sistemas Operativos:</strong> El software que gestiona todo (Windows, Linux, macOS).</li>
-                <li><strong>Bases de Datos:</strong> Almacenamiento masivo de información (SQL, NoSQL).</li>
-                <li><strong>IA y Ciberseguridad:</strong> El futuro de la protección y la simulación del pensamiento humano.</li>
-            </ul>
-
-            <br>
-            <a class="nav-link" href="#catalogo">VOLVER AL CATÁLOGO</a>
-        </article>
+        <!-- Proyecto 10: Galería Dinámica -->
+            <!--el proyecto 10 es una galería de imágenes dinámica que permite al usuario buscar imágenes por palabra clave, filtrar por categorías y mostrar las imágenes en una cuadrícula, con la opción de hacer clic en una imagen para verla en tamaño completo-->
+        <section class="contenedor-principal">
+            <h2 class="titulo-proyecto" data-target="p10">Proyecto 10: Galería</h2>
+            <div id="p10" class="proyecto oculto">
+                <input type="text" id="busc-gal" placeholder="Buscar...">
+                <div class="filtros">
+                    <button class="btn-f" data-f="todas">Todas</button>
+                    <button class="btn-f" data-f="animales">Animales</button>
+                    <button class="btn-f" data-f="tec">Tec</button>
+                    <button class="btn-f" data-f="nat">Nat</button>
+                </div>
+                <div id="grid-gal" class="cuadricula"></div>
+            </div>
+        </section>
     </main>
 
+    <!-- Modal para Galería -->
+    <div id="modal-img" class="modal oculto"><!--esta sección es para mostrar una imagen en grande cuando se hace clic en una imagen de la galería, y el atributo id para identificarlo, y el atributo clas sirve para asignar funciones y estilos depedientes de javascript y css-->
+        <span id="close-modal">times;</span>
+        <img id="img-full" src="">
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
